@@ -10,4 +10,102 @@
 
 * {
     font-family: 'Dosis', sans-serif;
+    box-sizing: content-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cream);
+}
+
+p,
+h2,
+h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.modal {
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+}
+
+.modal-header {
+    background-color: var(--softRed);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.modal-body {
+    background-color: white;
+    color: var(--darkBrown);
+    font-weight: 900;
+    border-radius: 20px;
+    padding: 20px;
+    gap: 10px;
+}
+
+.chart {
+    height: 200px;
+    display: grid;
+    padding: 10px;
+    gap: 10px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 9fr 1fr;
+    align-items: end;
+    text-align: center;
+    position: relative;
+    color: var(--cyan);
+}
+
+#bar1 {
+    /* height: 100%;
+    width: 14%;
+    background-color: red; */
+}
+
+.bar {
+    background-color: var(--softRed);
+    height: 40%;
+    position: relative;
+    border-radius: 10px;
+}
+
+.bar:hover {
+    background-color: var(--cyan);
+    cursor: pointer;
+}
+
+.bar:nth-child(1):after {
+    content: "$52.36";
+    position: relative;
+    top: -40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: -60%; */
+    /* margin-top: -100%; */
+    background-color: var(--darkBrown);
+    color: white;
+    padding: 2px;
+    transform: scale(1.2);
+    border-radius: 5px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
 }
