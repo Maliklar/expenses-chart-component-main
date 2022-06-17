@@ -13,6 +13,8 @@ fetch("./data.json")
             console.log(data[i].day)
             let ele = document.getElementById(data[i].day);
             ele.style.height = (data[i].amount / max) * 100 + "%";
+            ele.dataset.value = data[i].amount;
+
         }
         console.log(max);
     });
